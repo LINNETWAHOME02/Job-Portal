@@ -3,9 +3,10 @@ import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
+const api_key = API_KEY
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAacd09iZjmT-SnlZkzzWymvvvh5tobJ2c",
+  apiKey: api_key,
   authDomain: "mern-job-portal-10ba8.firebaseapp.com",
   projectId: "mern-job-portal-10ba8",
   storageBucket: "mern-job-portal-10ba8.appspot.com",
