@@ -25,7 +25,9 @@ const Home = () => {
   useEffect(() => {
     setIsLoading(true);
     //Call-back to fetch the data
-    fetch("jobs.json").then(res => res.json()).then(data => {
+    fetch("http://localhost:5000/all-jobs")
+    .then(res => res.json())
+    .then(data => {
       //console.log(data)
       setJobs(data)
       setIsLoading(false)
@@ -106,7 +108,7 @@ const Home = () => {
       {/* Main Content */}
       <div className="bg-[#FAFAFA] md:grid grid-cols-4 gap-8 lg:px-24 px-4 py-12">
         
-        {/* Left side */}
+        {/* Left sidebar */}
         <div className="bg-white p-4 rounded">
           <Sidebar handleRadioButtonChange={handleRadioButtonChange} handleButtonChange={handleButtonChange}/>
         </div>
@@ -148,7 +150,7 @@ const Home = () => {
 
         </div>
         
-        {/* Right side */}
+        {/* Right sidebar */}
         <div className="bg-white p-4 rounded">
           <Newsletter />
         </div>

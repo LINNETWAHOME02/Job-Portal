@@ -2,8 +2,6 @@ import { React, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FaBarsStaggered, FaXmark } from "react-icons/fa6";
 
-import Home from "../Pages/Home";
-
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const handleMenuToggle = () => {
@@ -14,8 +12,8 @@ const NavBar = () => {
   //Array of objects
   const navItems = [
     { path: "/", title: "Start a search..." },
-    { path: "/my-job", title: "My Jobs" },
-    { path: "/salary", title: "Estimated Salary" },
+    { path: "/my-jobs", title: "My Jobs" },
+    { path: "/salary", title: "Salary Estimate" },
     { path: "/post-job", title: "Post A Job" },
   ];
 
@@ -24,7 +22,7 @@ const NavBar = () => {
       <nav className="flex justify-between items-center py-6">
         <a href="/" className="flex items-center gap-2 text-2xl text-black">
           <img src="../../public/images/logo.jpg" className="logo" />
-          <span>ATS</span>
+          <span>Job Portal</span>
         </a>
 
         {/*Nav items for large devices*/}
@@ -48,10 +46,10 @@ const NavBar = () => {
 
         {/*Sign up and Log in buttons*/}
         <div className="text-base text-primary font-medium space-x-5 lg:block">
-          <Link to="/login" className="py-2 px-5 border rounded">
+          <Link to="/log-in" className="py-2 px-5 border rounded">
             Log In
           </Link>
-          <Link to="/signup" className="py-2 px-5 border rounded bg-orange-500 text-white">
+          <Link to="/sign-up" className="py-2 px-5 border rounded bg-orange-500 text-white">
             Sign Up
           </Link>
         </div>
