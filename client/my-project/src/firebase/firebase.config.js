@@ -3,7 +3,9 @@ import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
+//Remember to define API_KEY in maybe .env file to use it here, and git ignore .env file
 const api_key = API_KEY
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: api_key,
